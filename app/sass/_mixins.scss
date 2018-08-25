@@ -1,0 +1,60 @@
+// Сброс стилей списка ul
+@mixin list-reset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// Creates a CSS triangle inside a `&::before` or `&::after` selector.
+//
+// $triangle-width - Width of the triangle.
+// $triangle-color - Color of the triangle.
+// $triangle-direction - Direction of the triangle. Can be `up`, `right`, `down`, or `left`.
+// $side-color - Color of the side triangles. Default = $triangle-color.
+// $side-width - Width of the side triangles. Default = $triangle-width.
+@mixin triangle(
+	$triangle-width,
+	$triangle-color,
+	$triangle-direction,
+	$side-color: transparent,
+	$side-width: $triangle-width
+) {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	-webkit-transform: rotate(360deg); // fixes Safari bug
+
+	@if ($triangle-direction == down) {
+		border-color: $triangle-color $side-color transparent;
+		border-top-width: $triangle-width;
+		border-right-width: $side-width;
+		border-bottom-width: 0;
+		border-left-width: $side-width;
+	}
+
+	@if ($triangle-direction == up) {
+		border-color: transparent $side-color $triangle-color;
+		border-top-width: 0;
+		border-right-width: $side-width;
+		border-bottom-width: $triangle-width;
+		border-left-width: $side-width;
+	}
+
+	@if ($triangle-direction == right) {
+		border-color: $side-color transparent $side-color $triangle-color;
+		border-top-width: $side-width;
+		border-right-width: 0;
+		border-bottom-width: $side-width;
+		border-left-width: $triangle-width;
+	}
+
+	@if ($triangle-direction == left) {
+		border-color: $side-color $triangle-color $side-color transparent;
+		border-top-width: $side-width;
+		border-right-width: $triangle-width;
+		border-bottom-width: $side-width;
+		border-left-width: 0;
+	}
+}
