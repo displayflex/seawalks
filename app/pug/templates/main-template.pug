@@ -1,0 +1,29 @@
+include ../mixins/mixins.pug
+
+block variables
+	- var pageTitle = 'Морские прогулки по Чёрному морю'
+
+doctype html
+html(lang="ru")
+
+	head
+		meta(charser="UTF-8")
+		//- meta(name="keywords" content="")
+		//- meta(name="description" content="")
+		meta(name="author" content="https://github.com/displayflex")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name='format-detection', content='telephone=no')
+		meta(name='format-detection', content='date=no')
+		meta(name='format-detection', content='address=no')
+		meta(name='format-detection', content='email=no')
+		meta(content='notranslate', name='google')
+		title #{pageTitle}
+		//- link(rel="preload" href="fonts/PTSansNarrowBold.woff2" as="font")
+		link(rel="stylesheet", href="css/style.min.css")
+
+	body
+		block header
+
+		block main
+
+		block footer

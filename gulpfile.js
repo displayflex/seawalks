@@ -11,18 +11,16 @@ var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
 var svgstore = require('gulp-svgstore');
-var posthtml = require('gulp-posthtml');
-var include = require('posthtml-include');
 var run = require('run-sequence');
 var del = require('del');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
 var concat = require('gulp-concat');
-var htmlmin = require('gulp-htmlmin');
 var tinypng = require('gulp-tinypng-compress');
 var notify = require('gulp-notify');
 var mqpacker = require('css-mqpacker');
 var colorguard = require('colorguard');
+var pug = require('gulp-pug');
 
 // CSS
 
@@ -31,7 +29,7 @@ gulp.task('style', function () {
 		.pipe(plumber())
 		.pipe(sass())
 		.on('error', notify.onError(function (error) {
-			return 'Problem here: ' + error.message;
+			return 'SASS problem here: ' + error.message;
 		}))
 		.pipe(postcss([
 			autoprefixer(),
@@ -59,14 +57,13 @@ gulp.task('colorguard', function () {
 // HTML
 
 gulp.task('html', function () {
-	return gulp.src('app/*.html')
-		.pipe(posthtml([
-			include()
-		]))
-		.pipe(htmlmin({
-			collapseWhitespace: true,
-			collapseInlineTagWhitespace: false,
-			conservativeCollapse: true
+	return gulp.src('app/pug/*.pug')
+		.pipe(plumber())
+		.pipe(pug({
+			pretty: true
+		}))
+		.on('error', notify.onError(function (error) {
+			return 'PUG Problem here: ' + error.message;
 		}))
 		.pipe(gulp.dest('build'))
 		.pipe(server.stream());
@@ -164,6 +161,7 @@ gulp.task('serve', function () {
 
 	gulp.watch('app/sass/**/*.scss', ['style']);
 	gulp.watch('app/*.html', ['html']);
+	gulp.watch('app/pug/**/*.pug', ['html']);
 	gulp.watch('app/js/**/*.js', ['js', server.reload]);
 });
 
