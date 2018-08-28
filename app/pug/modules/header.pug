@@ -1,44 +1,45 @@
 header.page-header
-	//- Навигация сайта
-	nav.main-nav
-		button(type="button").main-nav__toggle
-			span.visually-hidden Открыть меню
-		.main-nav__wrapper
-			ul.main-nav__list.site-list
-				+siteListItem('#', 'Популярные маршруты')
-				+siteListItem('#', 'Расписание рейсов')
-				+siteListItem('#', 'Забронированные рейсы')
-				+siteListItem('#', 'Вход для партнеров')
-				+siteListItem('#', 'О компании')
-				+siteListItem('#', 'Контакты')
+	.page-header__wrapper
+		//- Навигация сайта
+		nav.main-nav
+			button(type="button").main-nav__toggle
+				span.visually-hidden Открыть меню
+			.main-nav__wrapper
+				ul.main-nav__list.site-list
+					+siteListItem('#', 'Популярные маршруты')
+					+siteListItem('#', 'Расписание рейсов')
+					+siteListItem('#', 'Забронированные рейсы')
+					+siteListItem('#', 'Вход для партнеров')
+					+siteListItem('#', 'О компании')
+					+siteListItem('#', 'Контакты')
 
-	//- Личный кабинет
-	select(name="cabinet").cabinet
-		option(disabled selected value="Личный кабинет").cabinet__option Личный кабинет
-		option(value="Войти").cabinet__option Войти
+		//- Личный кабинет
+		select(name="cabinet").cabinet
+			option(disabled selected value="Personal-cabinet").cabinet__option Личный кабинет
+			option(value="Enter").cabinet__option Войти
 
-	//- Валюта
-	select(name="currency").currency
-		option(selected value="Рубль").currency__option Рубль
-		option(value="Евро").currency__option Евро
-		option(value="Доллар").currency__option Доллар
+		//- Валюта
+		select(name="currency").currency
+			option(selected value="Rubl").currency__option Рубль
+			option(value="Euro").currency__option Евро
+			option(value="Dollar").currency__option Доллар
 
-	//- Язык
-	select(name="language").language
-		option(selected value="Ru").language__option Ru
-		option(value="En").language__option En
+		//- Язык
+		select(name="language").language
+			option(selected value="Ru").language__option Ru
+			option(value="En").language__option En
 
-	//- Телефон
-	a(href="tel:+88005006105").phone
-		span.phone__number 8 800 500-61-05
-		span.phone__description Круглосуточная поддержка
+		//- Телефон
+		a(href="tel:+88005006105").phone
+			span.phone__number 8 800 500-61-05
+			span.phone__description Круглосуточная поддержка
 
-	//- Лого
-	a.page-header__logo
-		img(src="img/logo.png", alt="Логотип" width="88" height="88").page-header__logo-img
+		//- Лого
+		a.page-header__logo
+			img(src="img/logo.png", alt="Логотип" width="88" height="88").page-header__logo-img
 
-	h1.page-header__title
-		| Морские прогулки
-		span.page-header__title--bigger  по чёрному морю
+		h1.page-header__title
+			| Морские прогулки
+			span.page-header__title--big  по чёрному морю
 
-	a(href="#").page-header__link Выбрать круиз
+		a(href="#").page-header__link Выбрать круиз

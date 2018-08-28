@@ -25,7 +25,7 @@ var pug = require('gulp-pug');
 // CSS
 
 gulp.task('style', function () {
-	gulp.src('app/sass/style.scss')
+	gulp.src('app/sass/style.{sass,scss}')
 		.pipe(plumber())
 		.pipe(sass())
 		.on('error', notify.onError(function (error) {
