@@ -21,12 +21,14 @@ var notify = require('gulp-notify');
 var mqpacker = require('css-mqpacker');
 var colorguard = require('colorguard');
 var pug = require('gulp-pug');
+var wait = require('gulp-wait');
 
 // CSS
 
 gulp.task('style', function () {
 	gulp.src('app/sass/style.{sass,scss}')
 		.pipe(plumber())
+		.pipe(wait(500))
 		.pipe(sass())
 		.on('error', notify.onError(function (error) {
 			return 'SASS problem here: ' + error.message;
