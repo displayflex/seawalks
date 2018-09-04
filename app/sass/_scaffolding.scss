@@ -1,89 +1,99 @@
-// @font-face {
-// 	font-weight: normal;
-// 	font-family: "PT Sans Narrow";
-// 	font-style: normal;
-// 	font-display: swap;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Roboto Slab', serif;
 
-// 	src:
-// 		url("../fonts/PTSansNarrow.woff2") format("woff2"),
-// 		url("../fonts/PTSansNarrow.woff") format("woff");
-// }
+@font-face {
+	font-weight: normal;
+	font-family: "Raleway";
+	font-style: normal;
+	font-display: swap;
 
-// @font-face {
-// 	font-weight: bold;
-// 	font-family: "PT Sans Narrow";
-// 	font-style: normal;
-// 	font-display: swap;
+	src:
+		url("../fonts/RalewayRegular.woff2") format("woff2"),
+		url("../fonts/RalewayRegular.woff") format("woff");
+}
 
-// 	src:
-// 		url("../fonts/PTSansNarrowBold.woff2") format("woff2"),
-// 		url("../fonts/PTSansNarrowBold.woff") format("woff");
-// }
+@font-face {
+	font-weight: bold;
+	font-family: "Raleway";
+	font-style: normal;
+	font-display: swap;
 
-// *,
-// *::before,
-// *::after {
-// 	box-sizing: inherit;
-// }
+	src:
+		url("../fonts/RalewayBold.woff2") format("woff2"),
+		url("../fonts/RalewayBold.woff") format("woff");
+}
 
-// html {
-// 	box-sizing: border-box;
-// }
+@font-face {
+	font-weight: normal;
+	font-family: "Roboto Slab";
+	font-style: normal;
+	font-display: swap;
 
-// body {
-// 	min-width: 320px;
-// 	font-size: 18px;
-// 	line-height: 1.5;
-// 	font-family: "PT Sans Narrow", "Arial", sans-serif;
-// 	color: #f7f4f1;
-// 	font-style: normal;
-// 	background-color: $mid-grey;
+	src:
+		url("../fonts/RobotoSlabRegular.woff2") format("woff2"),
+		url("../fonts/RobotoSlabRegular.woff") format("woff");
+}
 
-// 	*:focus {
-// 		outline: 1px solid $brown;
-// 	}
-// }
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
 
-// img {
-// 	max-width: 100%;
-// 	height: auto;
-// }
+html {
+	box-sizing: border-box;
+}
 
-// .visually-hidden:not(:focus):not(:active) {
-// 	position: absolute;
-// 	width: 1px;
-// 	height: 1px;
-// 	margin: -1px;
-// 	padding: 0;
-// 	overflow: hidden;
-// 	white-space: nowrap;
-// 	border: 0;
-// 	clip: rect(0 0 0 0);
-// 	clip-path: inset(100%);
-// }
+body {
+	min-width: 320px;
+	font-size: 14px;
+	line-height: 1.71;
+	font-family: "Raleway", "Arial", sans-serif;
+	font-weight: normal;
+	color: $dark-blue;
+	font-style: normal;
+	background-color: $light-grey;
+}
 
-// .visually-hidden--focusable {
-// 	position: absolute;
-// 	width: 1px;
-// 	height: 1px;
-// 	margin: -1px;
-// 	padding: 0;
-// 	overflow: hidden;
-// 	white-space: nowrap;
-// 	border: 0;
-// 	clip: rect(0 0 0 0);
-// 	clip-path: inset(100%);
-// }
+img {
+	max-width: 100%;
+	height: auto;
+}
 
-// .js-no-scroll {
-// 	position: fixed;
-// 	width: 100%;
-// 	height: 100%;
-// 	overflow-x: hidden;
-// 	overflow-y: scroll;
-// }
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
 
-// =================
+.visually-hidden--focusable {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
+
+.js-no-scroll {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
 // Скрывает переполнение текстом
 // h1,
 // h2,

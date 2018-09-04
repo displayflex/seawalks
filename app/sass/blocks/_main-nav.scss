@@ -1,0 +1,39 @@
+.main-nav {
+	position: relative;
+
+	&__toggle {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		display: block;
+		width: 22px;
+		height: 16px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+}
+
+.main-nav--closed {
+	.main-nav__toggle::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 22px;
+		height: 1px;
+		background-color: #0d3351; // color?
+		box-shadow:
+			0 1px 0 0 #7090ac,
+			0 7px 0 0 #4b6d8a,
+			0 8px 0 0 #325673,
+			0 14px 0 0 #708fac,
+			0 15px 0 0 #0d3351;
+	}
+
+	.main-nav__wrapper {
+		display: none;
+	}
+}

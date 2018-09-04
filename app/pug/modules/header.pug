@@ -1,7 +1,7 @@
 header.page-header
 	.page-header__wrapper
 		//- Навигация сайта
-		nav.main-nav
+		nav.main-nav.main-nav--closed
 			button(type="button").main-nav__toggle
 				span.visually-hidden Открыть меню
 			.main-nav__wrapper
@@ -14,29 +14,31 @@ header.page-header
 					+siteListItem('#', 'Контакты')
 
 		//- Личный кабинет
-		select(name="cabinet").cabinet
+		select(name="cabinet").page-header__cabinet.cabinet
 			option(disabled selected value="Personal-cabinet").cabinet__option Личный кабинет
 			option(value="Enter").cabinet__option Войти
 
 		//- Валюта
-		select(name="currency").currency
+		select(name="currency").page-header__currency.currency
 			option(selected value="Rubl").currency__option Рубль
 			option(value="Euro").currency__option Евро
 			option(value="Dollar").currency__option Доллар
 
 		//- Язык
-		select(name="language").language
+		select(name="language").page-header__language.language
 			option(selected value="Ru").language__option Ru
 			option(value="En").language__option En
 
 		//- Телефон
-		a(href="tel:+88005006105").phone
+		a(href="tel:+88005006105").page-header__phone.phone
 			span.phone__number 8 800 500-61-05
 			span.phone__description Круглосуточная поддержка
 
 		//- Лого
 		a.page-header__logo
-			img(src="img/logo.png", alt="Логотип" width="88" height="88").page-header__logo-img
+			picture
+				source(media="(min-width: 1673px)" srcset="img/logo-desktop.png")
+				img(src="img/logo.png", alt="Логотип").page-header__logo-img
 
 		h1.page-header__title
 			| Морские прогулки
