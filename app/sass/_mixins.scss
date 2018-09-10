@@ -10,7 +10,7 @@
 // $triangle-width - Width of the triangle.
 // $triangle-color - Color of the triangle.
 // $triangle-direction - Direction of the triangle. Can be `up`, `right`, `down`, or `left`.
-// $side-color - Color of the side triangles. Default = $triangle-color.
+// $side-color - Color of the side triangles. Default = transparent.
 // $side-width - Width of the side triangles. Default = $triangle-width.
 @mixin triangle(
 	$triangle-width,

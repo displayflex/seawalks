@@ -1,18 +1,18 @@
 .page-header {
+	position: relative;
+	min-height: 583px;
+	padding: 26px 15px;
+	text-align: center;
 	background-color: $light-grey;
-	background-image:	url("../img/header-bg-mobile.jpg");
+	background-image: url("../img/header-bg-mobile.jpg");
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: cover;
-	padding: 26px 15px;
-	text-align: center;
-	min-height: 583px;
-	position: relative;
 
 	&__wrapper {
 		min-width: 290px;
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 	}
 
 	&__cabinet {
@@ -35,17 +35,17 @@
 		display: block;
 		width: 70px;
 		height: 70px;
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 	}
 
 	&__title {
-		color: $dark-blue;
-		font-family: "Roboto Slab", serif;
-		font-size: 20px;
 		font-weight: 400;
-		letter-spacing: 1px; // ??
+		font-size: 20px;
 		line-height: 48px; // px??
+		font-family: "Roboto Slab", serif;
+		color: $dark-blue;
+		letter-spacing: 1px; // ??
 
 		&--big {
 			display: block;
@@ -59,31 +59,31 @@
 		display: block;
 		width: 202px;
 		height: 47px;
-		background-color: $blue;
-		margin-left: auto;
 		margin-right: auto;
-		color: $white;
-		font-family: "Raleway", "Roboto Slab", "Arial", sans-serif;
-		font-size: 14px;
+		margin-left: auto;
 		font-weight: 400;
+		font-size: 14px;
 		line-height: 48px;
-		letter-spacing: 0.7px;
+		font-family: "Raleway", "Arial", sans-serif;
+		color: $white;
 		text-decoration: none;
+		letter-spacing: 0.7px;
+		background-color: $blue-33;
 		cursor: pointer;
 	}
 
 	&::after {
 		content: "";
-		display: block;
 		position: absolute;
 		bottom: -25px;
 		left: 50%;
-		transform: translateX(-50%);
+		display: block;
 		width: 48px;
 		height: 222px;
-		background-image:	url("../img/header-line.png");
+		background-image: url("../img/header-line.png");
 		background-repeat: no-repeat;
 		background-position: center bottom;
 		background-size: 48px 222px;
+		transform: translateX(-50%);
 	}
 }

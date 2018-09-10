@@ -1,81 +1,102 @@
 main.page-main
 	section.catalog
 		h2.catalog__title Каталог круизов
-		p Сортировать круизы по
-		select(name="catalog-sorting").catalog__sorting
-			option(selected value="price").catalog__sorting-option цене
-			option(value="popularity").currency__option популярности
+		p.catalog__text Сортировать круизы по
+			select(name="catalog-sorting").catalog__sorting
+				option(selected value="price").catalog__sorting-option цене
+				option(value="popularity").catalog__sorting-option популярности
 
-		.catalog__item.resort-card
+		figure.catalog__item.resort-card.resort-card--bestseller
 			.resort-card__image-wrapper
-				img(src="", alt="Анапа")
-			.resort-card__description
+				picture
+					source(media="(min-width: 1673px)" srcset="img/photo-anapa-desktop.jpg")
+					source(media="(min-width: 1300px)" srcset="img/photo-anapa-tablet.jpg")
+					img(src="img/photo-anapa-mobile.jpg", alt="Анапа").resort-card__image
+			b.resort-card__label Хит продаж
+			figcaption.resort-card__description
 				a(href="#").resort-card__link
 					h3.resort-card__title Морской круиз в Анапу
+						span.resort-card__title-triangle
 				p.resort-card__about
 					b Маршрут:
-					| Сочи-Лазаревское-Геленджик-Анапа
+					|  Сочи-Лазаревское-Геленджик-Анапа
 				p.resort-card__about
 					b Продолжительность:
-					| 10 ч. 0 мин.
-				span.resort-card__price 49 000 руб.
+					|  10&nbsp;ч.&nbsp;0&nbsp;мин.
+				span.resort-card__price 49&nbsp;000&nbsp;руб.
 
-		.catalog__item.resort-card
+		figure.catalog__item.resort-card.resort-card--stock
 			.resort-card__image-wrapper
-				img(src="", alt="Морская прогулка")
-			.resort-card__description
+				picture
+					source(media="(min-width: 1673px)" srcset="img/photo-excursion-desktop.jpg")
+					source(media="(min-width: 1300px)" srcset="img/photo-excursion-tablet.jpg")
+					img(src="img/photo-excursion-mobile.jpg", alt="Морская экскурсия").resort-card__image
+			b.resort-card__label Акция
+			figcaption.resort-card__description
 				a(href="#").resort-card__link
 					h3.resort-card__title Обзорная морская прогулка с экскурсией
+						span.resort-card__title-triangle
 				p.resort-card__about
 					b Маршрут:
-					| Сочи-Адлер-Сочи (без высадки)
+					|  Сочи-Адлер-Сочи (без высадки)
 				p.resort-card__about
 					b Продолжительность:
-					| 1 ч. 0 мин.
-				span.resort-card__price 5 000 руб.
-				span.resort-card__old-price 15 000 руб.
+					|  1&nbsp;ч.&nbsp;0&nbsp;мин.
+				span.resort-card__price 5&nbsp;000&nbsp;руб.
+				span.resort-card__old-price 15&nbsp;000&nbsp;руб.
 
-		.catalog__item.resort-card
+		figure.catalog__item.resort-card.resort-card--stock
 			.resort-card__image-wrapper
-				img(src="", alt="Геленджик")
-			.resort-card__description
+				picture
+					source(media="(min-width: 1673px)" srcset="img/photo-gelendzhik-desktop.jpg")
+					source(media="(min-width: 1300px)" srcset="img/photo-gelendzhik-tablet.jpg")
+					img(src="img/photo-gelendzhik-mobile.jpg", alt="Геленджик").resort-card__image
+			b.resort-card__label Скидка 10%
+			figcaption.resort-card__description
 				a(href="#").resort-card__link
 					h3.resort-card__title Морская прогулка в Геленджик
+						span.resort-card__title-triangle
 				p.resort-card__about
 					b Маршрут:
-					| Сочи-Туапсе-Геленджик
+					|  Сочи-Туапсе-Геленджик
 				p.resort-card__about
 					b Продолжительность:
-					| 12 ч. 30 мин.
-				span.resort-card__price 7 000 руб.
-				span.resort-card__old-price 10 000 руб.
+					|  12&nbsp;ч.&nbsp;30&nbsp;мин.
+				span.resort-card__price 7&nbsp;000&nbsp;руб.
+				span.resort-card__old-price 10&nbsp;000&nbsp;руб.
 
-		.catalog__item.resort-card
+		figure.catalog__item.resort-card
 			.resort-card__image-wrapper
-				img(src="", alt="Новороссийск")
-			.resort-card__description
+				picture
+					source(media="(min-width: 1673px)" srcset="img/photo-novorossiysk-desktop.jpg")
+					source(media="(min-width: 1300px)" srcset="img/photo-novorossiysk-tablet.jpg")
+					img(src="img/photo-novorossiysk-mobile.jpg", alt="Новороссийск").resort-card__image
+			figcaption.resort-card__description
 				a(href="#").resort-card__link
 					h3.resort-card__title Морской круиз в Новороссийск
+						span.resort-card__title-triangle
 				p.resort-card__about
 					b Маршрут:
-					| Сочи-Геленджик-Новороссйиск-Геленджик-Сочи
+					|  Сочи-Геленджик-Новороссйиск-Геленджик-Сочи
 				p.resort-card__about
 					b Продолжительность:
-					| 13 ч. 0 мин.
-				span.resort-card__price 14 800 руб.
+					|  13&nbsp;ч.&nbsp;0&nbsp;мин.
+				span.resort-card__price 14&nbsp;800&nbsp;руб.
 
-		.catalog__item.resort-card
+		figure.catalog__item.resort-card.resort-card--desktop-only
 			.resort-card__image-wrapper
-				img(src="", alt="Абрау-Дюрсо")
-			.resort-card__description
+				img(src="img/photo-abrau-durso-desktop.jpg", alt="Абрау-Дюрсо").resort-card__image
+			figcaption.resort-card__description
 				a(href="#").resort-card__link
 					h3.resort-card__title Морская прогулка в Абрау-Дюрсо
+						span.resort-card__title-triangle
 				p.resort-card__about
 					b Маршрут:
-					| Сочи-Абрау-Дюрсо
+					|  Сочи-Абрау-Дюрсо
 				p.resort-card__about
 					b Продолжительность:
-					| 11 ч. 0 мин.
-				span.resort-card__price 14 800 руб.
+					|  11&nbsp;ч.&nbsp;0&nbsp;мин.
+				span.resort-card__price 14&nbsp;800&nbsp;руб.
 
 		a(href="#").catalog__more Больше круизов
+			span.catalog__more-triangle

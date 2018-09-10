@@ -1,0 +1,130 @@
+.resort-card {
+	position: relative;
+	background-color: $white;
+
+	&__image-wrapper {
+		height: 229px;
+		overflow: hidden;
+	}
+
+	&__label {
+		// TODO: добавить паддинги или переделать без flex
+		position: absolute;
+		top: -7px;
+		right: 23px;
+		z-index: 999;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 90px;
+		height: 82px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.29;
+		font-family: "Raleway", "Arial", sans-serif;
+		vertical-align: middle;
+		text-align: center;
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: 0.7px;
+
+		&::after {
+			@include triangle(19px, transparent, up, $blue-33, 45px);
+
+			position: absolute;
+			bottom: -19px;
+			left: 0;
+		}
+	}
+
+	&__description {
+		padding: 18px 27px 18px 22px;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	&__title {
+		margin: 0;
+		font-weight: 400;
+		font-size: 18px;
+		font-family: "Roboto Slab", serif;
+		color: $blue-00;
+		letter-spacing: 0.9px;
+	}
+
+	&__title-triangle {
+		position: relative;
+
+		&::before {
+			@include triangle(5px, $blue-33, right, transparent, 4px);
+
+			position: absolute;
+			top: 50%;
+			left: 8px;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__about {
+		font: inherit;
+		color: inherit;
+		letter-spacing: 0.7px;
+	}
+
+	&__price {
+		margin-right: 5px; // ??
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 1.6;
+		font-family: "Roboto Slab", serif;
+		color: $dark-blue;
+		letter-spacing: 1.5px;
+	}
+
+	&__old-price {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 2.67;
+		font-family: "Roboto Slab", serif;
+		color: $dark-blue;
+		text-decoration: line-through;
+		letter-spacing: 0.9px;
+		opacity: 0.55;
+	}
+
+	&--bestseller {
+		.resort-card__label {
+			background-color: $blue-33;
+
+			&::after {
+				@include triangle(19px, transparent, up, $blue-33, 45px);
+
+				position: absolute;
+				bottom: -19px;
+				left: 0;
+			}
+		}
+	}
+
+	&--stock {
+		.resort-card__label {
+			background-color: $red;
+
+			&::after {
+				@include triangle(19px, transparent, up, $red, 45px);
+
+				position: absolute;
+				bottom: -19px;
+				left: 0;
+			}
+		}
+	}
+
+	&--desktop-only {
+		display: none;
+	}
+}

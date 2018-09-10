@@ -5,8 +5,8 @@
 	font-weight: normal;
 	font-family: "Raleway";
 	font-style: normal;
-	font-display: swap;
 
+	font-display: swap;
 	src:
 		url("../fonts/RalewayRegular.woff2") format("woff2"),
 		url("../fonts/RalewayRegular.woff") format("woff");
@@ -16,8 +16,8 @@
 	font-weight: bold;
 	font-family: "Raleway";
 	font-style: normal;
-	font-display: swap;
 
+	font-display: swap;
 	src:
 		url("../fonts/RalewayBold.woff2") format("woff2"),
 		url("../fonts/RalewayBold.woff") format("woff");
@@ -27,8 +27,8 @@
 	font-weight: normal;
 	font-family: "Roboto Slab";
 	font-style: normal;
-	font-display: swap;
 
+	font-display: swap;
 	src:
 		url("../fonts/RobotoSlabRegular.woff2") format("woff2"),
 		url("../fonts/RobotoSlabRegular.woff") format("woff");
@@ -46,10 +46,10 @@ html {
 
 body {
 	min-width: 320px;
+	font-weight: normal;
 	font-size: 14px;
 	line-height: 1.71;
 	font-family: "Raleway", "Arial", sans-serif;
-	font-weight: normal;
 	color: $dark-blue;
 	font-style: normal;
 	background-color: $light-grey;

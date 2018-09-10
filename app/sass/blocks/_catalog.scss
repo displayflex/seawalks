@@ -1,0 +1,71 @@
+.catalog {
+	&__title {
+		margin: 0;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 48px;
+		font-family: "Roboto Slab", serif;
+		text-align: center;
+		color: inherit;
+	}
+
+	&__text {
+		margin: 0;
+		font: inherit;
+		text-align: center;
+		color: inherit;
+		letter-spacing: 0.7px;
+	}
+
+	// TODO: стилизовать select
+	&__sorting {
+		display: inline-block;
+		width: 60px;
+		font: inherit;
+		color: inherit;
+		font-style: italic;
+		letter-spacing: 0.7px;
+		background-color: $light-grey;
+		border: none;
+	}
+
+	&__sorting-option {
+		// TODO:
+	}
+
+	&__item {
+		margin-right: auto;
+		margin-bottom: 20px;
+		margin-left: auto;
+	}
+
+	&__more {
+		// TODO: добавить паддинги или переделать без flex
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 202px;
+		height: 47px;
+		margin-right: auto;
+		margin-left: auto;
+		font: inherit;
+		text-align: center;
+		color: $white;
+		text-decoration: none;
+		letter-spacing: 0.7px;
+		background-color: $blue-33;
+	}
+
+	&__more-triangle {
+		position: relative;
+
+		&::before {
+			@include triangle(5px, $white, down, transparent, 4px);
+
+			position: absolute;
+			top: 50%;
+			left: 12px;
+			transform: translateY(-50%);
+		}
+	}
+}
