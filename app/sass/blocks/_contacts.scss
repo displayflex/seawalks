@@ -1,0 +1,25 @@
+.contacts {
+	&__phone {
+		display: block;
+		font-weight: 700;
+		color: inherit;
+		text-decoration: none;
+		letter-spacing: 0.7px;
+		// TODO: hover, focus
+	}
+
+	&__support {
+		display: block;
+		margin-bottom: 10px;
+		font-size: 10px;
+		color: inherit;
+		text-decoration: none;
+		letter-spacing: 0.5px;
+		// TODO: hover, focus
+	}
+
+	&__copyright {
+		font: inherit;
+		letter-spacing: 0.7px;
+	}
+}
