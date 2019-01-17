@@ -20,6 +20,10 @@ html(lang="ru")
 		meta(content='notranslate', name='google')
 		title #{pageTitle}
 		//- link(rel="preload" href="fonts/PTSansNarrowBold.woff2" as="font")
+
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet")
+
+
 		link(rel="stylesheet", href="css/style.min.css")
 
 	//- TODO: body.page?
@@ -29,3 +33,7 @@ html(lang="ru")
 		block main
 
 		block footer
+
+		//- script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js")
+		//- script(src="js/scripts.min.js")

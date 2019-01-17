@@ -1,0 +1,11 @@
+@media (min-width: $tablet-width) {
+	.language {
+		width: 40px;
+		margin-right: 40px;
+		font: inherit;
+		color: $dark-blue;
+		letter-spacing: 0.7px;
+		background-color: transparent;
+		border: 0;
+	}
+}

@@ -1,0 +1,24 @@
+@media (min-width: $tablet-width) {
+	.phone {
+		width: 165px;
+		color: $dark-blue;
+		text-decoration: none;
+		text-align-last: left;
+		// TODO: hover, focus
+
+		&__number {
+			display: block;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 1;
+			letter-spacing: 0.7px;
+		}
+
+		&__description {
+			display: block;
+			font-weight: 400;
+			font-size: 10px;
+			letter-spacing: 0.5px;
+		}
+	}
+}

@@ -15,6 +15,14 @@
 		margin-left: auto;
 	}
 
+	&__nav {
+		position: absolute;
+		top: 26px;
+		left: 15px;
+		width: 22px;
+		height: 16px;
+	}
+
 	&__cabinet {
 		display: none;
 	}
@@ -40,6 +48,7 @@
 	}
 
 	&__title {
+		margin-top: 0;
 		font-weight: 400;
 		font-size: 20px;
 		line-height: 48px; // px??
@@ -85,5 +94,37 @@
 		background-position: center bottom;
 		background-size: 48px 222px;
 		transform: translateX(-50%);
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.page-header {
+		background-image: url("../img/header-bg-tablet.jpg");
+
+		&__nav {
+			position: static;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+			height: auto;
+			margin-bottom: 70px;
+		}
+
+		&__cabinet {
+			display: block;
+		}
+
+		&__currency {
+			display: block;
+		}
+
+		&__language {
+			display: block;
+		}
+
+		&__phone {
+			display: block;
+		}
 	}
 }

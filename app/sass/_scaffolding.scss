@@ -53,6 +53,10 @@ body {
 	color: $dark-blue;
 	font-style: normal;
 	background-color: $light-grey;
+
+	*:focus {
+		outline: 1px solid $blue-33;
+	}
 }
 
 img {

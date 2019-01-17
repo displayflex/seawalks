@@ -1,0 +1,25 @@
+@media (min-width: $tablet-width) {
+	.currency {
+		width: 80px;
+		margin-right: 40px;
+		font: inherit;
+		color: $dark-blue;
+		letter-spacing: 0.7px;
+		background-color: transparent;
+		border: none;
+
+		&__option {
+
+		}
+
+		&__symbol {
+			// display: inline-block;
+			// margin-right: 5px;
+			// font-weight: 700;
+			// color: $blue-33;
+		}
+	}
+}
+
+// TODO: selects!
+// TODO: hovers, focuses

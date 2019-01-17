@@ -1,38 +1,45 @@
 header.page-header
 	.page-header__wrapper
 		//- Навигация сайта
-		nav.main-nav.main-nav--closed
-			button(type="button").main-nav__toggle
-				span.visually-hidden Открыть меню
-			.main-nav__wrapper
-				ul.main-nav__list.site-list
-					+siteListItem('#', 'Популярные маршруты')
-					+siteListItem('#', 'Расписание рейсов')
-					+siteListItem('#', 'Забронированные рейсы')
-					+siteListItem('#', 'Вход для партнеров')
-					+siteListItem('#', 'О компании')
-					+siteListItem('#', 'Контакты')
+		.page-header__nav
+			nav.main-nav.main-nav--closed
+				button(type="button").main-nav__toggle
+					span.visually-hidden Открыть меню
+				.main-nav__wrapper
+					ul.main-nav__list
+						+mainNavListItem('#', 'Популярные маршруты')
+						+mainNavListItem('#', 'Расписание рейсов')
+						+mainNavListItem('#', 'Забронированные рейсы')
+						+mainNavListItem('#', 'Вход для партнеров')
+						+mainNavListItem('#', 'О компании')
+						+mainNavListItem('#', 'Контакты')
 
-		//- Личный кабинет
-		select(name="cabinet").page-header__cabinet.cabinet
-			option(disabled selected value="Personal-cabinet").cabinet__option Личный кабинет
-			option(value="Enter").cabinet__option Войти
+			//- Личный кабинет
+			select(name="cabinet").page-header__cabinet.cabinet
+				option(disabled selected value="Personal-cabinet").cabinet__option Личный кабинет
+				option(value="Enter").cabinet__option Войти
 
-		//- Валюта
-		select(name="currency").page-header__currency.currency
-			option(selected value="Rubl").currency__option Рубль
-			option(value="Euro").currency__option Евро
-			option(value="Dollar").currency__option Доллар
+			//- Валюта
+			select(name="currency").page-header__currency.currency
+				option(selected value="Rubl").currency__option
+					//- span.currency__symbol ₽
+					| Рубль
+				option(value="Euro").currency__option
+					//- span.currency__symbol €
+					| Евро
+				option(value="Dollar").currency__option
+					//- span.currency__symbol $
+					| Доллар
 
-		//- Язык
-		select(name="language").page-header__language.language
-			option(selected value="Ru").language__option Ru
-			option(value="En").language__option En
+			//- Язык
+			select(name="language").page-header__language.language
+				option(selected value="Ru").language__option Ru
+				option(value="En").language__option En
 
-		//- Телефон
-		a(href="tel:+88005006105").page-header__phone.phone
-			span.phone__number 8 800 500-61-05
-			span.phone__description Круглосуточная поддержка
+			//- Телефон
+			a(href="tel:+88005006105").page-header__phone.phone
+				span.phone__number 8 800 500-61-05
+				span.phone__description Круглосуточная поддержка
 
 		//- Лого
 		a.page-header__logo
@@ -45,4 +52,3 @@ header.page-header
 			span.page-header__title--big  по чёрному морю
 
 		a(href="#").page-header__link Выбрать круиз
-		//- TODO: .btn на кнопки

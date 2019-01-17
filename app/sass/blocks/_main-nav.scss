@@ -1,5 +1,8 @@
 .main-nav {
 	position: relative;
+	width: 22px;
+	height: 100%;
+	height: 16px;
 
 	&__toggle {
 		position: absolute;
@@ -35,5 +38,11 @@
 
 	.main-nav__wrapper {
 		display: none;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.main-nav {
+		margin-right: auto;
 	}
 }
