@@ -1,0 +1,18 @@
+.short-nav {
+	width: 200px;
+	margin-right: 20px;
+
+	&__list {
+		@include list-reset;
+
+		text-align-last: left;
+	}
+
+	&__link {
+		font: inherit;
+		color: $dark-blue;
+		text-decoration: none;
+		letter-spacing: 0.7px;
+		// TODO: hover, focus
+	}
+}

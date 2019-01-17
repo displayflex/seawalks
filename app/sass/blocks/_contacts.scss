@@ -23,3 +23,9 @@
 		letter-spacing: 0.7px;
 	}
 }
+
+@media (min-width: $tablet-width) {
+	.contacts {
+		text-align: left;
+	}
+}
