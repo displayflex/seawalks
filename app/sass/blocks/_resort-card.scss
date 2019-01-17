@@ -38,6 +38,10 @@
 	}
 
 	&__description {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		min-height: 270px;
 		padding: 18px 27px 18px 22px;
 	}
 
@@ -49,6 +53,7 @@
 
 	&__title {
 		margin: 0;
+		margin-bottom: 14px;
 		font-weight: 400;
 		font-size: 18px;
 		font-family: "Roboto Slab", serif;
@@ -70,19 +75,26 @@
 	}
 
 	&__about {
+		margin-top: 0;
 		font: inherit;
 		color: inherit;
 		letter-spacing: 0.7px;
 	}
 
+	&__price-wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: auto;
+	}
+
 	&__price {
-		margin-right: 5px; // ??
 		font-weight: 400;
 		font-size: 30px;
 		line-height: 1.6;
 		font-family: "Roboto Slab", serif;
 		color: $dark-blue;
 		letter-spacing: 1.5px;
+		// TODO: проверить переполнение при большей цене
 	}
 
 	&__old-price {
@@ -126,5 +138,19 @@
 
 	&--desktop-only {
 		display: none;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.resort-card {
+		width: 345px;
+
+		&__label {
+			right: 32px;
+		}
+
+		&__description {
+			padding: 30px 30px 30px 30px; // ?
+		}
 	}
 }
