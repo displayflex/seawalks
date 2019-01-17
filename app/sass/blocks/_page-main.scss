@@ -7,3 +7,9 @@
 		padding-bottom: 62px;
 	}
 }
+
+@media (min-width: $desktop-width) {
+	.page-main {
+		padding-top: 110px;
+	}
+}

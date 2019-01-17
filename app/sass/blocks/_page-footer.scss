@@ -32,3 +32,11 @@
 		}
 	}
 }
+
+@media (min-width: $desktop-width) {
+	.page-footer {
+		&__wrapper {
+			max-width: 1140px;
+		}
+	}
+}

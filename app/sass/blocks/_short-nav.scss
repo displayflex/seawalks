@@ -16,3 +16,10 @@
 		// TODO: hover, focus
 	}
 }
+
+@media (min-width: $desktop-width) {
+	.short-nav {
+		width: 263px;
+		margin-right: 30px;
+	}
+}

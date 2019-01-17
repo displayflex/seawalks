@@ -41,7 +41,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-		min-height: 270px;
+		// min-height: 270px; // ????????????????
 		padding: 18px 27px 18px 22px;
 	}
 
@@ -135,10 +135,6 @@
 			}
 		}
 	}
-
-	&--desktop-only {
-		display: none;
-	}
 }
 
 @media (min-width: $tablet-width) {
@@ -151,6 +147,24 @@
 
 		&__description {
 			padding: 30px 30px 30px 30px; // ?
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.resort-card {
+		width: 555px;
+
+		&__image-wrapper {
+			height: 215px;
+		}
+
+		&--bestseller .resort-card__image-wrapper {
+			height: 437px;
+		}
+
+		&--stock .resort-card__image-wrapper {
+			height: 113px;
 		}
 	}
 }
